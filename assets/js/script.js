@@ -8,7 +8,10 @@ let lblPr = document.getElementById("lblPr");
 
 let Money = document.getElementById("Money");
 let lblCount = document.getElementById("lblCount");
+
 let reload = document.getElementById("reload");
+let help = document.getElementById("help");
+let help2 = document.getElementById("help2");
 
 let count = 1;
 let ganancia= 0;
@@ -119,11 +122,55 @@ const checkAnswer = (lbl) =>{
 
 }
 
+const reset = () =>{
+    lblA.disabled=false;
+    lblB.disabled=false;
+    lblC.disabled=false;
+    lblD.disabled=false;
+}
+
+
+const fifty = () =>{
+    let countHelp = 0;
+
+    if(lblA.innerHTML!==currentQuestion.opcionCorrecta){
+        lblA.disabled=true;
+        countHelp += 1;
+    }
+
+    if(lblB.innerHTML!==currentQuestion.opcionCorrecta){
+        lblB.disabled=true;
+        countHelp += 1;
+        if (countHelp===2) {
+            return "";
+        }
+    }
+
+    if(lblC.innerHTML!==currentQuestion.opcionCorrecta){
+        lblC.disabled=true;
+        countHelp += 1;
+        if (countHelp===2) {
+            return "";
+        }
+    }
+
+    if(lblD.innerHTML!==currentQuestion.opcionCorrecta){
+        lblD.disabled=true;
+        countHelp += 1;
+        if (countHelp===2) {
+            return "";
+        }
+    }
+}
+
+const public = () =>{
+    alert("El público aconseja la opción " + currentQuestion.opcionCorrecta);
+    help2.disabled=true;
+}
+
 play();
 
-preguntas.forEach(function(elemento, indice, array) {
-    console.log(elemento.pregunta, indice);
-})
+
 
 lblA.onclick = function(){
     if(checkAnswer(lblA)===true){
@@ -145,7 +192,7 @@ lblA.onclick = function(){
         lblCount.innerHTML= count+"/10";
         play();
     }
-        
+        reset();
 }
 
 lblB.onclick = function(){
@@ -168,6 +215,7 @@ lblB.onclick = function(){
         lblCount.innerHTML= count+"/10";
         play();
     }
+    reset();
 }
 
 lblC.onclick = function(){
@@ -191,6 +239,7 @@ lblC.onclick = function(){
         lblCount.innerHTML= count+"/10";
         play();
     }
+    reset();
 }
 
 lblD.onclick = function(){
@@ -215,9 +264,19 @@ lblD.onclick = function(){
         lblCount.innerHTML= count+"/10";
         play();
     }
+    reset();
 }
 
 
 reload.onclick = function(){
     location.reload();
+}
+
+help.onclick=function(){
+    fifty();
+    help.disabled=true;
+}
+
+help2.onclick = function () {
+    public();
 }
