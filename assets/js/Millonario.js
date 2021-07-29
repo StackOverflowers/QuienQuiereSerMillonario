@@ -6,6 +6,7 @@ let btnB = document.getElementById("btnB");
 let btnC = document.getElementById("btnC");
 let btnD = document.getElementById("btnD");
 let pregunta = document.getElementById("pregunta");
+let btnfin = document.getElementById("btnfin");
 let habilitar = 0;
 let habilitarBotones = 0;
 let numeroActual = 0; 
@@ -120,6 +121,12 @@ btnStart.onclick = function (){
     habilitar = 1;
     alert("La prueba comienza ahora!")
     nuevaPregunta();
+}
+btnfin.onclick = function (){
+    habilitar = 0;
+    habilitarBotones = 0;
+    alert("Te has retirado, dinero en bolsa : $" + dinero + " pesos ")
+    dinero = 0;
 }
 
 
