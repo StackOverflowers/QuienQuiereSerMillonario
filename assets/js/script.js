@@ -1,1 +1,0 @@
-// Quien quiere ser millonario
