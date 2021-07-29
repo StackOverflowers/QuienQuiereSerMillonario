@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <title>Quien quiere ser millonario</title>
-</head>
+  </head>
 
-<body class="flex-container">
-    <div class="justify-content-center">
-          <img class="img-fluid " src="./assets/img/banner.png">
-        
-        <button type="button" class="btn btn-light btn-lg .btn-block">Jugar</button>
-        
-        <button type="button" class="btn btn-light btn-lg .btn-block">Instrucciones</button>
+  <body>
+    <div class="flex-container">
+      <div class="justify-content-center">
+        <img class="img-fluid" src="./assets/img/banner.png" />
+        <a href="#" type="button" class="btn btn-light btn-lg .btn-block"
+          >Jugar</a
+        >
+        <a
+          href="#openModal"
+          type="button"
+          class="btn btn-light btn-lg .btn-block"
+          >Instrucciones</a
+        >
+      </div>
     </div>
+
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Cerrar" class="close">X</a>
+        <h2>Instrucciones:</h2>
+        <ol>
+          <li>
+            Por cada pregunta tendrás 4 respuestas posibles, de las cuales solo
+            una es correcta.
+          </li>
+          <li>Por cada pregunta acertada se incrementa el premio.</li>
+          <li>
+            Si te equivocas en cualquier pregunta pierdes automáticamente todo.
+          </li>
+        </ol>
+      </div>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
