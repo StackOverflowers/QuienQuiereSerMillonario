@@ -7,6 +7,8 @@ let btnC = document.getElementById("btnC");
 let btnD = document.getElementById("btnD");
 let pregunta = document.getElementById("pregunta");
 let btnfin = document.getElementById("btnfin");
+let btndinero = document.getElementById("btndinero");
+
 let habilitar = 0;
 let habilitarBotones = 0;
 let numeroActual = 0; 
@@ -14,33 +16,33 @@ let dinero = 0;
 let dinerotemporal = 0;
 
 let preguntas = [    
-    "¿ Cuanto es 1+1 ? ",
-    "¿ Cuanto es 2+2 ? ",
-    "¿ Cuanto es 3+3 ? ",
-    "¿ Cuanto es 4+4 ? ",
-    "¿ Cuanto es 5+5 ? ",
-    "¿ Cuanto es 6+6 ? ",
-    "¿ Cuanto es 7+7 ? ",
-    "¿ Cuanto es 8+8 ? ",
-    "¿ Cuanto es 9+9 ? ",
-    "¿ Cuanto es 10+10 ? ",
-    "¿ Cuanto es 11+11 ? ",
-    "¿ Cuanto es 12+12 ? ",
+    "¿ Si 2+2 =4, Cual es la masa del Sol? ",
+    "¿ Que pasaria si pinocho dice: me va a crecer la nariz? ",
+    "¿ Si Zeus lucha contra Odin, que pasa ? ",
+    "¿ Capital de Colombia? ",
+    "¿ te esta gustando este juego ? ",
+    " Hay un terremoto, necesitas guardar la informacion ",
+    " Bonus: 1 + 1 ",
+    "¿ Cuantos oceanos hay en la Tierra ? ",
+    "¿ Como es la comunidad de LOL ? ",
+    " En colombia que significa *melo*",
+    "¿ Cual el rio mas largo del mundo? ",
+    "¿ Cuál es la nación más pequeña del mundo? ",
 ]
 
 let respuestas = [
-    ["respuesta 2", "respuesta 1", "respuesta 3", "respuesta 4" ],
-    ["respuesta 3", "respuesta 4", "respuesta 5", "respuesta 7" ],
-    ["respuesta 5", "respuesta 3", "respuesta 6", "respuesta 2" ],
-    ["respuesta 3", "respuesta 8", "respuesta 9", "respuesta 12" ],
-    ["respuesta 5", "respuesta 4", "respuesta 10", "respuesta 9" ],
-    ["respuesta 6", "respuesta 6", "respuestac", "respuesta 12" ],
-    ["respuesta 14", "respuesta 12", "respuesta c", "respuesta d" ],
-    ["respuesta 12", "respuesta 16", "respuesta c", "respuesta d" ],
-    ["respuesta 14", "respuesta 12", "respuesta c", "respuesta 18" ],
-    ["respuesta 16", "respuesta 14", "respuesta 20", "respuesta d" ],
-    ["respuesta 18", "respuesta 22", "respuesta c", "respuesta d" ],
-    ["respuesta 24", "respuesta 18", "respuesta c", "respuesta d" ]
+    ["A. 1.989 × 10^30 kg", "B. 1.349 × 10^30 kg", "C. 2.24 × 10^30 kg ", "D. 1.656 × 10^30 kg" ],
+    ["A. La nariz le crece", "B. La respuesta esta en tu corazon", "C. La nariz no le crece", "D. La nariz explota" ],
+    ["A. LLega Thor ", "B. Zeus derrota a Odin", "C. Goku les gana", "D. Odin derrota a Zeus" ],
+    ["A. Medellin 3", "B. Bogota ", "C. Cali", "D. Cartagena" ],
+    ["A .Es la C ", "B. Recordar mas tarde", "C. Si, me encanta", "D. No, es aburrido" ],
+    ["A. git (fetch pull commit)", "B. git (add log commit)", "C. git (push commit pull)", "D. git (add commit push)" ],
+    ["A. 2 ", "B. Esta no es", "C. Tampoco esta", "D. Es la A" ],
+    ["A. 4 Oceanos ", "B. 5 Oceanos ", "C. 6 Oceanos ", "D. 7 Oceanos " ],
+    ["A. Alegre ", "B. Amistosa ", "C. Colaboradora", "D. Toxica " ],
+    ["A. Morenito", "B. Amargado", "C. Chevere ", "D. Triste d" ],
+    ["A. Rio Yangtsé", "B. Rio Amazonas", "C. Rio Nilo", "D. Rio Danubio" ],
+    ["A. Vaticano ", "B. Japon ", "C. Corea del Norte ", "D. Andarro " ]
 ]
 
 
@@ -82,6 +84,7 @@ const activar = (opcion) => {
     if (Correctas[numeroActual] == opcion+1) {
         dinero += 10000;
         alert("Correcto, dinero en bolsa : $" + dinero + " pesos ")
+        btndinero.innerHTML = dinero
         nuevaPregunta();
     } else {
         alert(" Perdiste todo el dinero ")   
@@ -128,6 +131,7 @@ btnfin.onclick = function (){
     alert("Te has retirado, dinero en bolsa : $" + dinero + " pesos ")
     dinero = 0;
 }
+
 
 
 
