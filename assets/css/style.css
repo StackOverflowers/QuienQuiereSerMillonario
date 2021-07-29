@@ -1,3 +1,27 @@
-.bla{
-
+html {
+    background-color: #082944;
+    margin: 0;
+    padding: 0;
 }
+
+.flex-container{
+    display: flex;
+    justify-content: center;    
+    background-color: #082944;
+}
+
+.flex-container button{
+    margin-top: 80px;
+    margin-left: 200px;
+    min-width: 350px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    box-shadow: 26px -14px teal;
+    border-radius: 20px;
+}
+
+img{
+    height: 100%; 
+    width: 100%
+}
+
